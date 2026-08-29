@@ -4,7 +4,7 @@ _This project is to be done in teams of 2._
 
 **COLLABORATORS Youzhu Jin, Yuge Xu, David Zhang**
 
-**THE MASTERWORK Firefly Synchrony**
+**THE MASTERWORK The “Breathing” Sleep Light"**
 
 ---
 
