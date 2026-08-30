@@ -3,7 +3,7 @@
 
 _This project is to be done in teams of 2._
 
-**COLLABORATORS Youzhu Jin, Yuge Xu**
+**COLLABORATORS Yuge Xu (NetID: yx692), Youzhu Jin (NetID: yj578)**
 
 **THE MASTERWORK The “Breathing” Sleep Light"**
 
@@ -172,12 +172,25 @@ Physically act out the interaction you planned. For now, just pretend the light
 is doing what you've scripted — a person can wave a flashlight, or you can narrate
 it aloud.
 
-**Are there things that seemed better on paper than when acted out?**
+We acted out the scene using a flashlight to stand in for the breathing light. One of us played the student who was studying, and the other played a nearby student in the library.
 
-**Did new ideas about the piece surface once you were on your feet?**
+### Were Things Different in Real Life Than on Paper?
 
-**Are there key moments in the interaction where things could go in a different direction?**
-Iterate your storyboards to capture key non-sequential aspects of the interaction. 
+Yes. On paper, we assumed a nearby student would just glance at the light and instantly understand that the laptop was simply asleep. But when we acted it out, this felt too easy. If you don't already know about this design, a stranger's laptop glowing softly isn't obviously "sleeping." It could just look unusual or make someone curious. Understanding the light isn't as automatic as we first thought.
+
+### Did New Ideas Come Up While Acting It Out?
+
+Yes. We realized the light isn't just communicating with its owner. Other people nearby are watching it too, and they might interpret it differently. Some people would recognize it and leave it alone, while others might become curious and want to check it out. We hadn't considered this difference when we were planning on paper.
+
+### Where Could Things Go Differently?
+
+We found one key moment where the story could take two different paths: immediately after a nearby student notices the glowing light.
+
+In one version, the student gets curious and opens the laptop to see what is happening. The screen suddenly lights up brightly. A moment later, the laptop's owner returns and finds someone else touching it, creating an awkward situation.
+
+In the other version, the student leans in for a closer look, realizes the light means the laptop is only sleeping, and leaves it alone. Both students quietly return to their own work, and nothing is disrupted.
+
+Acting out these two outcomes helped us understand and refine the differences among our three storyboards. The first presents a simple, linear story, while the second and third explore how the same moment can unfold differently depending on how the observer reacts.
 
 ## Part C. Prototype the Light (light first!)
 
@@ -195,6 +208,12 @@ masterwork should you consider layering in a second modality (sound, vibration,
 motion). If in doubt, keep polishing the light. The other modalities are next
 week's business.
 
+![Tinkerbelle controller interface](images/tinkerbelle-controller.jpg)
+
+![Tinkerbelle phone interface](images/tinkerbelle-phone.jpg)
+
+We used Tinkerbelle to control the phone screen remotely. When presses “Start breathing,” the screen gradually fades in and out in a yellow light on a two-to-three-second cycle, recreating the laptop's sleep indicator.
+
 ## Part D. Wizard the Device
 
 Set up a "wizard" arrangement so one person can secretly drive the light while
@@ -202,7 +221,9 @@ another acts with it — this is how you make the device feel alive without
 building any real electronics. (Zoom works well for recording; you can pin the
 video feed of whichever scene you want to capture.)
 
-**Include your first attempts at recording the wizarded set-up here.**
+[First Wizarded Setup Attempt](https://drive.google.com/file/d/1Uhwu_z-rbWRkaqgAyHLR0zJx9suE3YzQ/view?usp=drive_link)
+
+Youzhu Jin secretly controlled the breathing light through Tinkerbelle while Yuge Xu acted out the interaction with the laptop.
 
 ## Part E. (optional) Costume the Device
 
@@ -224,11 +245,9 @@ and calm for a bedroom?
 the top of this lab: a viewer who knows the piece should recognize it; a viewer
 who doesn't should come away understanding what it's famous for. How might you illustrate the non-sequential aspects of the interaction in the sketch?
 
-**Include your video here.**
+[Final Video Sketch](https://drive.google.com/file/d/1PaZeyPPfI2rwBXfLMNF6pYCnSPNnsKAl/view?usp=drive_link)
 
-**Please indicate who you collaborated with on this lab.** Be generous in
-acknowledging their contributions, and credit any other influences (YouTube,
-Github, Twitter, a friend who lent you a lamp) that informed your recreation.
+This lab was completed in collaboration with Youzhu Jin and Yuge Xu. We worked together on the storyboards, acted out the interaction, controlled the breathing light, and recorded the final video sketch.
 
 ---
 
