@@ -142,11 +142,29 @@ don't need to be beautiful, but they must capture and communicate not only the b
 and the people around it. If you're new to storyboarding, read
 [this explanation](https://www.nngroup.com/articles/storyboards-visualize-ideas/).
 
-**Include pictures of your storyboards here.**
-
 Use the storyboards to decide what interaction to prototype.
 
-**Summarize the feedback you got here.**
+### Storyboard 1: Communicating the Laptop's State
+
+![Storyboard 1](images/storyboard-1.jpg)
+
+The student closes the laptop and temporarily leaves. The breathing light begins to pulse, allowing nearby students to understand that the laptop is asleep rather than turned off.
+
+### Storyboard 2: Direct Interaction with the Laptop
+
+![Storyboard 2](images/storyboard-2.jpg)
+
+After the owner leaves, another student notices the pulsing light and opens the laptop. The light responds to this interaction, but this version moves away from the passive nature of the original sleep light.
+
+### Storyboard 3: The Light Initiates the Interaction
+
+![Storyboard 3](images/storyboard-3.jpg)
+
+A nearby student notices the breathing light, looks more closely, and shares the observation with another student. The light draws their attention and communicates that the laptop is still active without requiring anyone to touch it.
+
+### Storyboard Feedback and Prototype Selection
+
+After reviewing the three storyboards as a team, we found that Storyboard 1 clearly communicated the laptop's sleep state, while Storyboard 2 introduced unnecessary physical interaction. Storyboard 3 best showed both the breathing light and its effect on nearby people, so we selected it as the basis for our prototype.
 
 ## Part B. Act out the Interaction
 
