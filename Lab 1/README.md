@@ -148,19 +148,34 @@ Use the storyboards to decide what interaction to prototype.
 
 ![Storyboard 1](images/storyboard-1.jpg)
 
-The student closes the laptop and temporarily leaves. The breathing light begins to pulse, allowing nearby students to understand that the laptop is asleep rather than turned off.
+- **Frame 1:** Student studying, laptop open.
+- **Frame 2:** Student finishes and closes the laptop.
+- **Frame 3:** Student walks away.
+- **Frame 4:** Small light starts slowly pulsing.
+- **Frame 5:** Nearby students notice the pulsing light.
+- **Frame 6:** Student comes back and opens the laptop.
 
 ### Storyboard 2: Direct Interaction with the Laptop
 
 ![Storyboard 2](images/storyboard-2.jpg)
 
-After the owner leaves, another student notices the pulsing light and opens the laptop. The light responds to this interaction, but this version moves away from the passive nature of the original sleep light.
+- **Frame 1:** Student studying.
+- **Frame 2:** Student closes the laptop and leaves.
+- **Frame 3:** Another student notices the laptop and its light.
+- **Frame 4:** They wonder whether the laptop is asleep and reach out to open it.
+- **Frame 5:** The light changes because the laptop is being interacted with.
+- **Frame 6:** The original student comes back.
 
 ### Storyboard 3: The Light Initiates the Interaction
 
 ![Storyboard 3](images/storyboard-3.jpg)
 
-A nearby student notices the breathing light, looks more closely, and shares the observation with another student. The light draws their attention and communicates that the laptop is still active without requiring anyone to touch it.
+- **Frame 1:** Student studying.
+- **Frame 2:** Student closes the laptop and leaves.
+- **Frame 3:** A nearby student notices the tiny pulsing light.
+- **Frame 4:** They look more closely and point it out to another student.
+- **Frame 5:** They realize the laptop is still active and asleep.
+- **Frame 6:** The original student returns.
 
 ### Storyboard Feedback and Prototype Selection
 
