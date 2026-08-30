@@ -110,18 +110,32 @@ Close the lid, and the machine does not disappear. It starts to breathe instead.
 A single light rises and fades on the rhythm of human sleep, telling you silently
 that it has not shut down.
 
+
 ## Part A. Plan
 
-For your masterwork, reconstruct the interaction as a scene:
+### Main Scenario
 
-- **Setting:** Where and when does this interaction happen? (a jungle, a kitchen,
-  a spaceship corridor, a nightclub, a harbor at night)
-- **Players:** Who is involved? Who else is present? Think through everyone in
-  the setting, not just the primary user.
-- **Activity:** What is happening between the players and the light?
-- **Goals:** What is each player trying to do?
+A student is studying in the university library. Before temporarily leaving to use the bathroom, the student closes the laptop. While the laptop is closed, its breathing light begins to pulse and remains visible to nearby students.
 
-**Describe your setting, players, activity, and goals here.**
+### Setting
+
+The interaction takes place in a university library while students are studying.
+
+### Players
+
+The players include:
+
+- The main user, who is studying with their laptop.
+- Nearby students who are also studying in the library.
+- The laptop and its breathing sleep light.
+
+### Activity
+
+The main user temporarily leaves to use the bathroom and closes the laptop before leaving. While the laptop is closed, its small breathing light slowly pulses and remains visible to nearby students. The light communicates that the laptop is asleep rather than completely turned off.
+
+### Goals
+
+The main user does not want to shut down the laptop because they plan to return shortly, so they place it in sleep mode by closing the lid. Nearby students are focused on their own work, but they may notice the breathing light and understand that the laptop is still active in sleep mode.
 
 Now **sketch a 3 storyboards** of the interaction you are recreating. (The number may depend on the thing you drew, but stretch your thinking!) They
 don't need to be beautiful, but they must capture and communicate not only the behavior of the light, but how it affects
