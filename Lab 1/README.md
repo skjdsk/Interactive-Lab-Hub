@@ -277,8 +277,19 @@ videos, and give them reactions and feedback: tell them what you saw happening,
 guess the masterwork and the goals of the characters, and ask about anything that
 wasn't clear.
 
-**Who were the other groups you kibitzed with? Add links to their project pages here.**
-**Summarize the feedback you got from your partners here.**
+### Groups We Kibitzed With
+
+1. [certaindragon3's Lab 1](https://github.com/certaindragon3/Interactive-Lab-Hub/tree/Fall2026/Lab%201)
+2. [zijiz's Lab 1](https://github.com/zijiz/Interactive-Lab-Hub/blob/Fall2026/Lab%201/README.md)
+3. [davidzhanggg's Lab 1](https://github.com/davidzhanggg/Interactive-Lab-Hub/tree/Fall2026/Lab%201)
+
+### Feedback We Received
+
+After watching our video, our peers correctly identified the masterwork as a laptop's sleep indicator light, mainly because of its slow pulsing rhythm. They also understood the setting: a student briefly stepping away in the library without completely shutting down the laptop.
+
+They asked whether the light's color or brightness communicated something different from its rhythm because the light appeared slightly different in a few frames. This made us realize that the interaction's meaning comes primarily from the slow, repeating pulse rather than from changes in color or brightness.
+
+Their main suggestion was to make the fade slower and more visible, since subtle changes in brightness are harder to notice on video than in person.
 
 ## Remix, Update, or Critique the Master
 
