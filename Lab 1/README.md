@@ -317,7 +317,7 @@ _Storyboard will be added here._
 
 ### Final Video Sketch
 
-_Final video link will be added here._
+[Watch the final remastered video sketch](https://drive.google.com/file/d/1-QT_Gn574x3zmgG3VFt4bcYFyD7P_slc/view)
 
 Now that you understand your masterwork from the inside, respond to it. Do the
 recreation again, but this time make it your own — pick one of these moves (or
