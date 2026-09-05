@@ -293,6 +293,32 @@ Their main suggestion was to make the fade slower and more visible, since subtle
 
 ## Remix, Update, or Critique the Master
 
+### Design Direction and Code Update
+
+For our second iteration, we chose to update the breathing sleep light and push
+its emotional feedback further. The original light communicated only one calm,
+passive state. Our revised prototype adds two clearly different light states:
+
+- A **slow blue breathing light** represents the laptop sleeping peacefully.
+- A **faster red breathing light** represents urgency or warning when someone
+  interacts with the sleeping laptop.
+
+The change preserves the original idea of making a computer feel alive through
+a breathing rhythm, while giving it a wider emotional range and making its
+feedback easier to understand. The controller now includes controls for starting
+and stopping both the blue sleep state and the red alert state. Both effects are
+broadcast to the connected phone through Tinkerbelle.
+
+[View the updated Tinkerbelle code](tinkerbelle-remix/)
+
+### Updated Storyboard
+
+_Storyboard will be added here._
+
+### Final Video Sketch
+
+_Final video link will be added here._
+
 Now that you understand your masterwork from the inside, respond to it. Do the
 recreation again, but this time make it your own — pick one of these moves (or
 combine them):
