@@ -293,50 +293,103 @@ Their main suggestion was to make the fade slower and more visible, since subtle
 
 ## Remix, Update, or Critique the Master
 
-### Design Direction and Code Update
+### Design Direction
 
-For our second iteration, we chose to update the breathing sleep light and push
-its emotional feedback further. The original light communicated only one calm,
-passive state. Our revised prototype adds two clearly different light states:
+For our second iteration, we chose to fix a weakness of the original breathing
+sleep light. The original design communicates that the laptop is asleep through
+a slow, gentle pulse, but its feedback is passive and one-directional. It cannot
+respond when another person approaches or interacts with the laptop.
 
-- A **slow blue breathing light** represents the laptop sleeping peacefully.
-- A **faster red breathing light** represents urgency or warning when someone
-  interacts with the sleeping laptop.
+### Our Update
 
-The change preserves the original idea of making a computer feel alive through
-a breathing rhythm, while giving it a wider emotional range and making its
-feedback easier to understand. The controller now includes controls for starting
-and stopping both the blue sleep state and the red alert state. Both effects are
-broadcast to the connected phone through Tinkerbelle.
+We added two distinct breathing-light states. Under normal conditions, a blue
+light pulses slowly, representing that the laptop is peacefully asleep. When
+another person interacts with the laptop, the light changes to red and begins
+pulsing at a faster, more urgent rhythm.
 
-[View the updated Tinkerbelle code](tinkerbelle-remix/)
+The blue light communicates a calm sleeping state. In contrast, the red color
+communicates warning, while its faster pulse makes the laptop appear alert or
+anxious. This creates a clear distinction between "sleeping normally" and
+"something requires attention."
+
+### Connection to Feedback
+
+Our peers noted that the brightness changes in our original prototype were
+difficult to see clearly in the video. In response, we made the two states more
+visually distinct by changing both the color and breathing speed. The calm blue
+state is slow and subtle, while the urgent red state is faster and more
+noticeable.
 
 ### Updated Storyboard
 
-_Storyboard will be added here._
+![Storyboard for the remastered breathing light](images/remastered-storyboard.jpg)
+
+- **Frame 1:** The owner closes the laptop and temporarily leaves.
+- **Frame 2:** A blue light begins breathing slowly, showing that the laptop is
+  peacefully asleep.
+- **Frame 3:** Another student notices the breathing light and approaches the
+  laptop.
+- **Frame 4:** The student tries to touch the laptop. The light turns red and
+  begins pulsing rapidly.
+- **Frame 5:** The student understands the warning, stops interacting with the
+  laptop, and leaves it alone.
+- **Frame 6:** The owner returns. The light changes back to its normal blue
+  breathing state and turns off when the laptop is opened.
+
+### Prototype
+
+We modified Tinkerbelle to create and remotely control the two breathing-light
+states. One laptop ran the controller interface while a smartphone acted as the
+light. Both devices were connected to the same Wi-Fi network.
+
+The controller includes a **Start breathing** button for activating the slow
+blue sleep state and an **Alert** button for activating the faster red warning
+state. Separate stop buttons allow the wizard to end either effect. During the
+video sketch, a hidden team member used these controls to change the phone's
+light in response to the actors' actions.
+
+#### Controller Interface
+
+![Tinkerbelle controller with breathing and alert controls](images/prototype-controller.png)
+
+The computer interface allows the wizard to start the normal blue breathing
+light, activate the red alert state, or stop either effect.
+
+#### Phone Interface
+
+![Phone acting as the breathing sleep light](images/prototype-phone.png)
+
+The phone receives the controller's commands and displays the breathing-light
+animation. It was positioned with the laptop so that its screen functioned as
+the laptop's sleep indicator.
+
+### Updated Code
+
+We updated Tinkerbelle by adding:
+
+- A slow blue breathing animation for the normal sleep state.
+- A faster red breathing animation for the warning state.
+- Controller buttons for starting and stopping both animations.
+- Remote events that synchronize the selected animation with the connected
+  phone.
+
+[View the updated Tinkerbelle code](tinkerbelle-remix/)
+
+To run the prototype, install the dependencies listed in the project folder and
+start `tinker.py`. Connect the computer and phone to the same Wi-Fi network, open
+the Tinkerbelle webpage on both devices, and use the computer as the controller.
 
 ### Final Video Sketch
 
 [Watch the final remastered video sketch](https://drive.google.com/file/d/1-QT_Gn574x3zmgG3VFt4bcYFyD7P_slc/view)
 
-Now that you understand your masterwork from the inside, respond to it. Do the
-recreation again, but this time make it your own — pick one of these moves (or
-combine them):
+### Reflection
 
-1. **Remix the modality.** Your recreation no longer has to (just) use light. Use
-   vibration, sound, motion, heat — whatever best carries the interaction. Feel
-   free to fork and modify the Tinkerbelle code. (Add your updates to this lab's folder!)
-2. **Update it.** Redesign the piece for today's context, or for a setting its
-   creators never imagined (the piece with roommates in the room, with children
-   present, on a phone, in a car).
-3. **Fix its weaknesses.** You identified this master's strengths and weaknesses
-   in Part 0 — now address a weakness, or push a strength further.
-
-We will grade this second pass with an emphasis on **creativity** and on how well
-your response engages with what your master was really doing.
-
-**Document everything here — especially the storyboard and video. Photos of the
-prototype are great too.**
+Our redesign preserves the idea of the computer as a living, breathing object
+while making its feedback more responsive. The slow blue pulse suggests peaceful
+sleep, while the rapid red pulse clearly warns others to leave the laptop alone.
+A future version could use proximity or touch sensors to trigger the warning
+automatically.
 
 ---
 
