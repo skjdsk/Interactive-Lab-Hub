@@ -215,6 +215,14 @@ We strongly discourage literal digital or analog clock display: Be creative.
 2. Look at and give feedback on the Part E. for at least 3 other people in the class and get 3 people to comment on your Part E!)
 **Put the feedback for your ideas here.**
 
+### Feedback on Attention Horizon
+
+**David Zhang:** The sun and weather do a nice job giving the two time types a clear visual identity. The build order also makes sense for a screen this small. I'd want to check the morning, sunset, and night transitions early in Demo Mode, since the sun's position could be tricky to make out near the horizon.
+
+**Jerry Lee:** I like that the beach can shift mood without relying on numbers. On a 240×135 screen, I'd keep the waves, clouds, and rain minimal so the sun stays visible. It'd also help to add a small visual signal showing when a focus session is actively being tracked.
+
+**Nishant Ray:** The start/stop buttons are simple and intuitive. My concern is that "low attention" triggers stormy weather right away, even before someone's had a chance to get into their work, which could come across as discouraging. Starting with a neutral morning scene that slowly calms down might fit better with the idea of a supportive clock.
+
 ## Update your Lab Hub
 
 [Update your Lab Hub](pull_updates/README.md) to get the latest content and requirements for Part 2.
