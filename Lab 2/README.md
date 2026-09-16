@@ -1,5 +1,5 @@
 # Interactive Prototyping: The Clock of Pi
-**NAMES OF COLLABORATORS HERE**
+**Youzhu Jin, Yuge Xu, Ziji Zhang, Serena**
 
 Does it feel like time is moving strangely during this semester?
 
@@ -157,6 +157,14 @@ You can look in `screen_boot_script.py` for how to display text on the screen!
 You can look in `image.py` for an example of how to display an image on the screen. Can you make it switch to another image when you push one of the buttons?
 
 \*\*\***Include a picture of your own Raspberry Pi displaying the piscreen.service with your unique MAC address. Additionally, please provide another picture showing the successful completion of the screen test.**\*\*\*
+
+Our Raspberry Pi running `piscreen.service`, with its IP address and unique MAC address visible on the Mini PiTFT:
+
+<img src="part_c_images/boot-mac.jpg" alt="Raspberry Pi boot display showing the IP address and MAC address" width="650">
+
+Screen test: pressing a Mini PiTFT button fills the display white.
+
+<img src="part_c_images/screen-test.jpg" alt="Mini PiTFT showing a white screen while its button is pressed" width="650">
 
 
 ## Part D. 
