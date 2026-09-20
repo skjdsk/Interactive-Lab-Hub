@@ -410,9 +410,13 @@ Start small, pick just one element of your overall idea, just to show you have a
 
 \*\*\***Put a copy of your code in your Lab 2 Github repo.**\*\*\*
 
+[Barebones modified PiClock code](barebones_clock.py)
+
 ## Make a short video of your modified barebones PiClock
 
 \*\*\***Take a video of your barely modified PiClock.**\*\*\*
+
+[Barebones modified PiClock demo video](https://youtube.com/shorts/yJ6-v29Rack?feature=share)
 
 After you edit and work on the scripts for Lab 2, the files should be upload back to your own GitHub repo! You can push to your personal github repo by adding the files here, commiting and pushing.
 
@@ -436,6 +440,8 @@ Do take advantage of having done the previous iteration to refine and simplify y
 [Final Attention Horizon code](screen_clock.py)
 
 \*\*\***Take a video of your PiClock.**\*\*\*
+
+[Final Attention Horizon PiClock demo video](https://youtu.be/mNODjSwtffE)
 
 
 As always, make sure you document contributions and ideas from others (and AI) explicitly in your writeup.
