@@ -302,6 +302,8 @@ The two buttons record the beginning and end of an intentional focus period. The
 
 ### Verplank Diagram
 
+<img src="part_e_images/verplank-diagram.jpg" alt="Hand-drawn Verplank diagram for Attention Horizon" width="700">
+
 #### Do
 
 * Look at the sun to understand the approximate time of day.
@@ -348,6 +350,8 @@ The MiniPiTFT shows:
 ---
 
 ### Sketch
+
+<img src="part_e_images/concept-sketch.jpg" alt="Concept sketches showing low attention, focus in progress, and high attention beach scenes" width="600">
 
 **Put the names of the people you gave feedback to here. (Even better, add links to their repos here!)**
 
