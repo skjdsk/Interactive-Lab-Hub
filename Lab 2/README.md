@@ -372,6 +372,10 @@ The MiniPiTFT shows:
 
 One thought: people often have several focus sessions in a single day. If the device could also track the total accumulated focus time across all of those sessions and give the user some feedback on it, I think that would create an even stronger sense of accomplishment.
 
+### How Feedback Influenced Our Design
+
+The feedback helped us think about how a focus session could represent entering a flow state and feeling connected with nature. This inspired us to add a turtle to the beach animation. As the user focuses, the turtle becomes part of the calmer natural scene, representing the user gradually entering flow and becoming more connected with the environment.
+
 ## Update your Lab Hub
 
 [Update your Lab Hub](pull_updates/README.md) to get the latest content and requirements for Part 2.
