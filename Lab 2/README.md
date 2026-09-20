@@ -347,6 +347,26 @@ The MiniPiTFT shows:
 
 ### Storyboard
 
+#### Frame 1 — Morning, Low Attention
+
+<img src="part_e_images/storyboard-frame-1.jpg" alt="Storyboard frame 1 showing the morning low-attention beach scene" width="700">
+
+#### Frame 2 — Start Focus
+
+<img src="part_e_images/storyboard-frame-2.jpg" alt="Storyboard frame 2 showing the user pressing the left button to start focus" width="700">
+
+#### Frame 3 — Focus Time Accumulates
+
+<img src="part_e_images/storyboard-frame-3.jpg" alt="Storyboard frame 3 showing the beach becoming brighter as focus time accumulates" width="700">
+
+#### Frame 4 — Stop Focus
+
+<img src="part_e_images/storyboard-frame-4.jpg" alt="Storyboard frame 4 showing the user pressing the right button to stop focus" width="700">
+
+#### Frame 5 — Evening, High Attention
+
+<img src="part_e_images/storyboard-frame-5.jpg" alt="Storyboard frame 5 showing a calm sunset scene after accumulated focus" width="700">
+
 ---
 
 ### Sketch
@@ -412,6 +432,8 @@ Do take advantage of having done the previous iteration to refine and simplify y
 
 
 \*\*\***Put a copy of your code in your Lab 2 Github repo.**\*\*\*
+
+[Final Attention Horizon code](screen_clock.py)
 
 \*\*\***Take a video of your PiClock.**\*\*\*
 
