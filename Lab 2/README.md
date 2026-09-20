@@ -223,6 +223,10 @@ We strongly discourage literal digital or analog clock display: Be creative.
 
 **Nishant Ray:** The start/stop buttons are simple and intuitive. My concern is that "low attention" triggers stormy weather right away, even before someone's had a chance to get into their work, which could come across as discouraging. Starting with a neutral morning scene that slowly calms down might fit better with the idea of a supportive clock.
 
+**Additional peer feedback:** I really like the idea behind this clock. Instead of worrying about the actual time on the wall, the time you actually spend is the time that's truly yours. I also like how the interface starts with rough waves and gradually settles into a calm sea as the focus session gets longer. It's a nice way to represent the user entering a flow state, and wanting to see that calm sea gives you a reason to keep going.
+
+One thought: people often have several focus sessions in a single day. If the device could also track the total accumulated focus time across all of those sessions and give the user some feedback on it, I think that would create an even stronger sense of accomplishment.
+
 ## Update your Lab Hub
 
 [Update your Lab Hub](pull_updates/README.md) to get the latest content and requirements for Part 2.
