@@ -1,5 +1,5 @@
 # Interactive Prototyping: The Clock of Pi
-**Youzhu Jin, Yuge Xu, Ziji Zhang, Serena**
+**Youzhu Jin (yj578), Yuge Xu (yx692), Ziji Zhang (zz894), Serena Tsai (ht534)**
 
 Does it feel like time is moving strangely during this semester?
 
