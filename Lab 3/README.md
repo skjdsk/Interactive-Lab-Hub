@@ -1,8 +1,8 @@
 # Chatterboxes
 
-**NAMES OF COLLABORATORS HERE**
+**Collaborators:** Serena Tsai (ht534), Yuge Xu (yx692), Youzhu Jin (yj578), and Zijii Zhang (zz894).
 
-> **Jiesen Huang.** I tested the Part 1 speech interaction on Orange. Codex
+> **Jason Huang (Jiesen Huang, jh3263).** I tested the Part 1 speech interaction on Orange. Codex
 > assisted with remote setup, scripts, this writeup, and the storyboard illustrations
 > and layout; I provided the speech and listening observations and the coach concept.
 > A friend wrote the three-user test feedback incorporated into Part 2.
@@ -148,7 +148,7 @@ The demo script also shows `--output-raw`, which streams audio to the speaker as
 (This shell file should be saved to your own repo for this lab.)
 
 > I tried eSpeak, Festival, and Piper on Orange. I preferred Piper and wrote
-> [greet_jiesen.sh](speech-scripts/greet_jiesen.sh), which uses Piper to say my
+> [greet_jason.sh](speech-scripts/greet_jason.sh), which uses Piper to say my
 > name.
 
 \*\***Then answer: Is the same greeting, in these different voices, the same greeting? Describe one concrete way the voice changed what the utterance seemed to mean or who seemed to be speaking.**\*\*
