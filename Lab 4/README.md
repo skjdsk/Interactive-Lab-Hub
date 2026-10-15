@@ -1,5 +1,7 @@
 # Ph-UI!!!
 
+> The course instructions are kept in ordinary text. My experiment notes, responses, and images appear in blockquotes.
+
 <details>
 	<summary><strong>Instructions for Students (Click to Expand)</strong></summary>
   
@@ -144,6 +146,14 @@ Twizzler 10 touched!
 Twizzler 6 touched!
 ```
 
+> I connected the MPR121 through Qwiic and tested the touch pads directly. I then connected an alligator lead to pad 0 and touched the exposed metal at the other end. The terminal detected touch and release events on channel 0.
+>
+> In the alligator-clip test, three clear touches lasted approximately 2.77, 2.35, and 4.58 seconds. There were also additional events during the test. After the final release, no new events appeared for approximately 60 seconds, and no other channels triggered. An earlier direct-pad test had short repeated events and one unusually long touch reading, so I have not yet established the cause of those readings.
+>
+> This test used the exposed metal of the alligator clip; I have not yet tested a separate food or foil object.
+>
+> ![MPR121 Qwiic connection and alligator leads](%E6%8E%A5%E7%BA%BF.jpeg)
+
 ---
 
 ### Part B
@@ -167,6 +177,12 @@ Connect it to your pi with Qwiic connector and try running the three example scr
 ...
 ```
 
+> I replaced the MPR121 with the APDS-9960 using the Qwiic connection. In a 20-second proximity test, the raw readings ranged from 0 to 239. These are raw proximity values, not distances in centimeters.
+>
+> A separate 20-second light/color check returned 19 RGB and clear-channel samples. The clear-channel readings ranged from 39 to 10,949 during the shading exercise. This confirms changing light readings and working RGB data retrieval; it does not establish accurate color recognition.
+>
+> Neither the first 20-second gesture check nor a separate 30-second check returned any direction events. Gesture recognition remains unverified. I have not established whether the cause is the motion, sensor placement, or configuration.
+
 You can go the the [Adafruit GitHub Page](https://github.com/adafruit/Adafruit_CircuitPython_APDS9960) to see more examples for this sensor!
 
 #### Rotary Encoder 
@@ -188,6 +204,10 @@ Connect it to your pi with Qwiic connector and try running the example script, i
 
 You can go to the [Adafruit Learn Page](https://learn.adafruit.com/adafruit-i2c-qt-rotary-encoder/python-circuitpython) to learn more about the sensor! The sensor actually comes with an LED (neo pixel): Can you try lighting it up? 
 
+> The encoder was detected at address 0x36 with product ID 4991. The first check verified communication and sent red, green, and blue commands to the board's NeoPixel, then turned it off. I visually confirmed all three colors. The LED check used seesaw pin 6, following the linked Adafruit example.
+>
+> A separate 25-second input check recorded the position increasing from 0 to 75 and then decreasing to 61 when the rotation was reversed. It also recorded two complete button presses and releases. These results confirm rotation in both directions, the pushbutton, and visible LED output.
+
 #### Joystick 
 
 
@@ -202,6 +222,10 @@ Connect it to your pi with Qwiic connector and try running the example script to
 ```
 (circuitpython) pi@ixe00:~/Interactive-Lab-Hub/Lab 4 $ python joystick_test.py
 ```
+
+> I connected the Qwiic joystick and checked both axes and its pushbutton. The detected firmware version was v2.6. During a 45-second check, both X and Y ranged from 0 to 1023, and the stick returned to approximately X=508, Y=510 after the directional inputs.
+>
+> The first check contained no button changes. A separate 20-second button check recorded 1 → 0 → 1, confirming one complete press and release: 0 was pressed and 1 was released.
 
 You can go to the [SparkFun GitHub Page](https://github.com/sparkfun/Qwiic_Joystick_Py) to learn more about the sensor!
 
@@ -220,6 +244,10 @@ Connect it to your pi with Qwiic connector and try running the example script to
 ```
 (circuitpython) pi@ixe00:~/Interactive-Lab-Hub/Lab 4 $ python qwiic_distance.py
 ```
+
+> I connected the VCNL4040 and ran a 25-second proximity check. The 63 readings ranged from 0 to 20,869, with repeated high-to-low changes during the near/far exercise. Several low periods were around 3–4, and the final reading was 3.
+>
+> The test confirms a changing proximity signal suitable for exploring object-presence detection. These are raw readings, not calibrated distances. A threshold for the final interaction still needs to be chosen using the actual object and sensor placement.
 
 You can go to the [SparkFun GitHub Page](https://github.com/sparkfun/Qwiic_Proximity_Py) to learn more about the sensor and see other examples
 
@@ -249,12 +277,37 @@ Run the example:
 python pi_servo_hat_test.py
 ```
 For more details and advanced usage, see the [official SparkFun Servo pHAT documentation](https://learn.sparkfun.com/tutorials/pi-servo-phat-v2-hookup-guide/all#resources-and-going-further).
+
+> I checked the SIG, 5V, and GND connections and attempted an unloaded, finite channel-0 test using [servo_center_test.py](servo_center_test.py). The test sends two short sequences around the center pulse, using approximately 1.417–1.583 ms pulses, and finishes at 1.5 ms.
+>
+> The channel-0 commands completed, and the controller registers matched the intended center configuration. However, I observed no servo movement, including on a repeat run.
+>
+> I then moved the same servo to channel 1 and repeated the same short test using `python servo_center_test.py --channel 1`. The servo moved back and forth normally and returned to center. This verifies basic unloaded actuation on channel 1. The reason for the channel-0 failure is still unresolved; I have not established whether it was contact, wiring, or a channel fault. Future integration will use channel 1.
+
 A servo motor is a rotary actuator that allows for precise control of angular position. The position is set by the width of an electrical pulse (PWM). You can read [this Adafruit guide](https://learn.adafruit.com/adafruit-arduino-lesson-14-servo-motors/servo-motors) to learn more about how servos work.
 
 ---
 
 ### Part D
 ### Physical Interaction Design: Feast Automata
+
+> **Planned prototype: joystick-controlled sugar-cube dispenser.** Each of four compartments holds one cube. The selected interaction is one complete clockwise circle of the joystick for one indexing cycle, intended to advance the sugar wheel by one 90° compartment after calibration. A quarter-circle or half-circle does not trigger. The stick must be centered for 0.2 seconds at startup; then the user traces a circle away from the center. Reverse motion subtracts from progress, returning toward the center cancels an incomplete circle, and holding one direction does not repeat the request. Bounded modes discard input during movement. The continuous empty-test mode continues recognizing circles and queues up to four pending cycles. Pressing the joystick button clears pending cycles, stops the program, and disables this servo channel's PWM without automatically rewinding the wheel. The earlier push-and-return interaction remains available with `--gesture push`.
+>
+> **Continuous empty-test mode:** `python sugar_dispenser.py --hardware --continuous --channel 1` performs one outward stroke, waits, and returns for each complete clockwise circle. It does not stop after one or four cycles. Circles completed while the servo is moving enter a queue; overflow is reported with a request to slow down. A queue is not proof of dispensed sugar. This mode is currently for the unloaded servo. Actual one-cube delivery needs the proposed one-way mechanism or a different metering mechanism that releases only on the outward stroke.
+>
+> The proposed actuator is a Miuzei MS18 9g position servo. Its finite travel cannot directly drive unlimited same-direction quarter-turns. [sugar_dispenser.py](sugar_dispenser.py) therefore provides a bounded `direct` mode and a proposed `ratchet` mode. Ratchet mode requires a physical drive pawl and an anti-reverse pawl (or an equivalent one-way indexing mechanism): the outward stroke advances the wheel, and the return stroke resets the drive without reversing the wheel. This mechanism has not been built or tested. With default settings, direct mode allows only one outward stroke, then locks at the travel limit.
+>
+> The wheel also needs a stationary floor, a single-cube outlet, and an initial closed position or shutter so loading does not immediately release a cube. Each compartment should hold only one cube, and the outlet must not expose two compartments at once. The rotor's actual advance must be measured and adjusted to one 90° compartment; a software pulse or angle command alone does not prove this motion or a successful drop.
+>
+> **Local simulation:** from `Lab 4`, run `python3 sugar_dispenser.py` for bounded direct drive or `python3 sugar_dispenser.py --mode ratchet` for the proposed four-cycle mechanism. Neither command imports hardware libraries or operates a motor. Run `python3 -m unittest -v test_sugar_dispenser.py` to check the control logic.
+>
+> **Future Pi operation:** after transferring the source to Orange and activating the isolated Lab 4 environment, run `python sugar_dispenser.py --hardware --mode direct --channel 1`. Use `--mode ratchet` only after installing the one-way mechanism. The joystick uses Qwiic; the servo uses pHAT channel 1, following the earlier channel-1 test, with separate pHAT power. No display control is needed. Run only one pHAT application at a time because its initialization resets the controller.
+>
+> Clockwise recognition assumes X increases toward the user's right and Y toward the user's bottom. Check the installed joystick's raw readings; use `--x-sign -1` and/or `--y-sign -1` if those axes are reversed. A complete circle is accumulated from small angular changes, including the wrap between −180° and +180°. Angular jumps over 45° or sample gaps over 0.25 seconds reset progress, so trace the circle smoothly. These orientation assumptions have not yet been checked on the assembled device.
+>
+> `--home-ms`, `--step-ms`, and `--limit-ms` configure pulse widths, not verified shaft angles. CLI defaults now use 0.875 → 2.125 ms at 50 Hz. During unloaded testing, I reported that the 1.0 → 2.0 ms movement was approximately 60°, that 0.75 → 2.25 ms exceeded 90°, and that the intermediate range appeared close to 90°. These are visual estimates, not angular measurements; the final intermediate run's log did not record a completed joystick-triggered cycle before it was stopped, so the selected range remains provisional. Continuous-mode actuation and rotor travel need checking on the assembled mechanism. The program requires an empty mechanism before homing; the continuous test keeps it empty afterward. Restarting does not recover the wheel position or inventory; inspect and unload first.
+>
+> The bounded-mode four-cycle counter is an inventory estimate based on completed commands. It cannot detect jams, a missed cube, an empty compartment, or actual arrival in the cup. The initial version has no cup-presence interlock or drop sensor. On October 14, 2026, the initial program was deployed to `/home/pi/Interactive-Lab-Hub/Lab 4` on Orange, with matching source hashes and 22 passing tests, without motor actuation. Subsequent unloaded tests commanded channel 1 around center and at wider pulse ranges; I confirmed visible movement and gave the visual angle estimates above. The continuous empty-test update also matched the Mac source hashes and passed all 28 control and mocked-adapter tests on Orange. It was started on channel 1 and reached READY. The boot display remained active. Integrated rotor behavior and actual sugar delivery remain unverified.
 
 **Feast Automata:** build a device that **transforms ordinary dining rituals into playful physical interactions.** Begin with a familiar experience around eating, drinking, cooking, serving, or sharing food, and explore how sensing and actuation might augment, exaggerate, automate, or reinterpret your dining experience.
 
@@ -286,7 +339,23 @@ As you develop your Feast Automata concept, consider where the sensor and actuat
 
 **\*\*\*Draw 5 sketches that explore different physical arrangements for your sensing and actuation.\*\*\***
 
+> The following sketch pass and initial prototype questions are from Terence Zhang's [Lab 4 draft](https://github.com/TerenceZhang29/Interactive-Lab-Hub/tree/Fall2026/Lab%204), included here as collaborative ideation.
+>
+> ![Five Feast Automata sketches: over-pour head shaker, sugar cube dropper, cheers buddy, snack guard, condiment passer cart](images/feast_sketches.svg)
+>
+> 1. **Over-pour head shaker.** Copper tape strips on the outside of a glass connect to a capacitive sensor; the figure's neck shakes its head when the drink reaches a threshold.
+> 2. **Sugar-cube dropper.** A distance sensor in a coaster detects a cup, and a servo opens a hopper gate so one sugar cube slides down a chute into the cup.
+> 3. **Cheers buddy.** A distance sensor detects when a cup is lifted; a servo raises a figure's arm and a small cardboard glass, then lowers it when the cup is put down.
+> 4. **Snack guard.** An APDS-9960 proximity or gesture sensor counts reaches into a bowl; after the third reach, a servo swings a stop arm or lid over the bowl briefly.
+> 5. **Condiment passer.** A joystick controls the direction of small wheel carts that carry condiments across the table.
+
 **\*\*\*What questions do these sketches raise? What do you need to physically prototype to answer them?\*\*\***
+
+> 1. Can capacitive sensing detect liquid level through the glass, and can someone still lift and drink from it with wires attached? Build a mock-up with the sensor and wiring in place to check.
+> 2. Can the servo gate release exactly one sugar cube without jamming, and will the cube land in the cup instead of bouncing out? Build the hopper and chute, then test real sugar cubes at different chute angles.
+> 3. Would the movement interfere with picking up or putting down the cup? Check whether the design leaves enough space and whether the motion happens at a discoverable time.
+> 4. Does the rim sensor count one reach once, or double-count the hand entering and leaving? Test the interaction and tune the counting behavior.
+> 5. Will condiment bottles stay upright when the carts start and stop? Load a cart with representative weight and test it.
 
 **\*\*\*Pick one design to prototype and explain why.\*\*\***
 
@@ -504,3 +573,5 @@ For submission, the readme.md page for this lab should be edited to include the 
 * Upload any materials that explain what you did, into your lab 4 repository, and link them in your lab 4 readme.md.
 * Link your Lab 4 readme.md in your main Interactive-Lab-Hub readme.md. 
 * Labs are due on Mondays, make sure to submit your Lab 4 readme.md to Canvas.
+
+> **AI assistance:** Codex helped set up the isolated Python environment, run and summarize sensor checks over SSH, and draft these experiment notes. Codex also drafted the sugar-dispenser control program, local logic tests, and the proposed mechanism notes. I connected the hardware and performed the physical touch actions for the earlier sensor checks. The sugar-dispenser integration has not yet been tested on hardware. The notes distinguish observed readings from tests that have not been completed.
